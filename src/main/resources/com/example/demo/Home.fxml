@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.Controller">
+    <children>
+        <VBox alignment="TOP_CENTER" layoutY="-3.0" prefHeight="585.0" prefWidth="261.0" style="-fx-background-color: #063970;" AnchorPane.bottomAnchor="-6.0" AnchorPane.topAnchor="-3.0">
+            <children>
+            <ImageView fitHeight="123.0" fitWidth="137.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/Health%20%20(6).png" />
+               </image>
+            </ImageView>
+                <Label text="Heal Me | HealthCare App" textFill="WHITE">
+                    <VBox.margin>
+                        <Insets bottom="20.0" />
+                    </VBox.margin>
+                </Label>
+            <Label prefHeight="64.0" prefWidth="0.0" />
+                <Button fx:id="btnOverview" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" stylesheets="@style.css" text="Patients" textFill="#e7e5e5">
+                    <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                    <VBox.margin>
+                        <Insets />
+                    </VBox.margin>
+                    <padding>
+                        <Insets left="50.0" />
+                    </padding>
+                </Button>
+                <Button fx:id="btnOrders" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" stylesheets="@style.css" text="Appointments">
+                    <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <padding>
+                        <Insets left="50.0" />
+                    </padding>
+                </Button>
+            <Label prefHeight="229.0" prefWidth="1.0" />
+            <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="267.0" stylesheets="@style.css" text="sign out" />
+            </children>
+        </VBox>
+        <StackPane layoutX="258.0" prefHeight="576.0" prefWidth="793.0" style="-fx-background-color: white;">
+            <children>
+                <Pane fx:id="pnlOrders" prefHeight="200.0" prefWidth="200.0" />
+                <Pane fx:id="pnlOverview" prefHeight="599.0" prefWidth="822.0" style="-fx-background-color: white;">
+                    <children>
+                        <TextField fx:id="searchArea" layoutX="24.0" layoutY="184.0" prefHeight="38.0" prefWidth="614.0" promptText="looking for a patient ?" style="-fx-background-color: white; -fx-border-color: #063970; -fx-border-radius: 2em;" />
+                        <Label layoutX="57.0" layoutY="25.0" text="HealMe | Medical Desktop Application" textFill="#063970">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                        </Label>
+                        <HBox alignment="CENTER_LEFT" layoutX="45.0" layoutY="72.0" prefHeight="92.0" prefWidth="661.0" spacing="50.0">
+                            <children>
+                                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                    <children>
+                                        <Label text="22000" textFill="#2a73ff">
+                                            <font>
+                                                <Font name="System Bold" size="26.0" />
+                                            </font>
+                                        </Label>
+                                        <Label text="Total Patients" textFill="#063970" />
+                                    </children>
+                                </VBox>
+                                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                    <children>
+                                        <Label text="1500" textFill="#26bfbc">
+                                            <font>
+                                                <Font name="System Bold" size="26.0" />
+                                            </font>
+                                        </Label>
+                                        <Label prefHeight="21.0" prefWidth="121.0" text="Total Appointments" textFill="#063970" />
+                                    </children>
+                                </VBox>
+                                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                    <children>
+                                        <Label text="1000" textFill="#fa5f7e">
+                                            <font>
+                                                <Font name="System Bold" size="26.0" />
+                                            </font>
+                                        </Label>
+                                        <Label text="Pending Appointments" textFill="#063970" />
+                                    </children>
+                                </VBox>
+                                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                    <children>
+                                        <Label text="780" textFill="#de0000">
+                                            <font>
+                                                <Font name="System Bold" size="26.0" />
+                                            </font>
+                                        </Label>
+                                        <Label text="Appointments done" textFill="#063970" />
+                                    </children>
+                                </VBox>
+                            </children>
+                        </HBox>
+                        <ScrollPane layoutX="14.0" layoutY="233.0" prefHeight="290.0" prefWidth="746.0" stylesheets="@style.css">
+                            <content>
+                                <TableView fx:id="tableView" prefHeight="290.0" prefWidth="751.0" stylesheets="@style.css">
+                                    <columns>
+                                        <TableColumn fx:id="refColumn" prefWidth="68.0" text="code" />
+                                        <TableColumn fx:id="nomColumn" prefWidth="82.0" text="name" />
+                                        <TableColumn fx:id="prenomColumn" prefWidth="75.0" text="lastname" />
+                                        <TableColumn fx:id="sexeColumn" prefWidth="81.00003051757812" text="gender" />
+                                        <TableColumn fx:id="emailColumn" prefWidth="184.0" text="email" />
+                                        <TableColumn fx:id="dateNaissanceColumn" prefWidth="92.0" text="birthdate" />
+                                        <TableColumn fx:id="notesColumn" prefWidth="154.0" text="notes" />
+                                    </columns>
+                                </TableView>
+                            </content>
+                        </ScrollPane>
+                        <ImageView fitHeight="17.0" fitWidth="16.0" layoutX="749.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+
+                            </image>
+                        </ImageView>
+                        <ImageView fitHeight="21.0" fitWidth="22.0" layoutX="715.0" layoutY="195.0" style="-fx-background-color: white;">
+
+                        </ImageView>
+                        <Button fx:id="BtnAddPatient" layoutX="654.0" layoutY="187.0" mnemonicParsing="false" onAction="#fnctnAdd" prefHeight="33.0" prefWidth="100.0" stylesheets="@style.css" text="new " />
+                        <Button fx:id="btnRefresh" layoutX="259.0" layoutY="538.0" mnemonicParsing="false" onAction="#loadData" stylesheets="@style.css" text="refresh" />
+                  <Button fx:id="editBtn" layoutX="332.0" layoutY="538.0" mnemonicParsing="false" onAction="#editLoadData" stylesheets="@style.css" text="edit" />
+                  <Button fx:id="deleteBtn" layoutX="386.0" layoutY="538.0" mnemonicParsing="false" onAction="#deletePatient" stylesheets="@style.css" text="delete" />
+                  <Separator layoutX="26.0" layoutY="559.0" prefHeight="17.0" prefWidth="220.0" stylesheets="@style.css" />
+                  <Separator layoutX="523.0" layoutY="559.0" prefHeight="17.0" prefWidth="244.0" stylesheets="@style.css" />
+                  <Button fx:id="printBtn" layoutX="454.0" layoutY="538.0" mnemonicParsing="false" onAction="#printPatient" stylesheets="@style.css" text="print" />
+
+                    </children>
+                </Pane>
+            </children>
+        </StackPane>
+    </children>
+    <effect>
+        <DropShadow color="white" />
+    </effect>
+
+</AnchorPane>

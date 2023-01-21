@@ -1,0 +1,123 @@
+.button
+{
+    -fx-background-color : #063970
+;
+
+    -fx-text-fill : white;
+}
+.button:hover{
+    -fx-background-color : white
+;
+    -fx-text-fill : #063970;
+    -fx-border-color: #063970;
+}
+.button:pressed
+{
+    -fx-background-color : white
+;
+    -fx-text-fill : #063970;
+    -fx-border-color: #063970;
+}
+
+
+.scroll-pane {
+    -fx-background-color: white;
+}
+
+.scroll-bar:horizontal, .scroll-bar:vertical{
+    -fx-background-color:transparent;
+}
+
+.increment-button, .decrement-button {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.scroll-bar:horizontal .track,
+.scroll-bar:vertical .track{
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-background-radius: 0em;
+}
+
+.scroll-bar:horizontal .thumb,
+.scroll-bar:vertical .thumb {
+    -fx-background-color: #063970;
+    -fx-background-radius: 5em;
+}
+
+.scroll-pane > .corner {
+    -fx-background-color: #063970;
+}
+.table-view{
+    -fx-background-color: white;
+    -fx-border-radius: 20%;
+    -fx-border-width: 10px;
+}
+.table-view .column-header-background{
+    -fx-background-color: #063970;
+}
+
+.table-view .column-header-background .label{
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+}
+
+.table-view .table-cell{
+    -fx-text-fill: white;
+}
+
+.table-row-cell{
+    -fx-background-color: -fx-table-cell-border-color, #005797;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em;
+}
+
+.table-row-cell:odd{
+    -fx-background-color: -fx-table-cell-border-color,#063970;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #0d0533;
+    -fx-background-insets: 0;
+    -fx-background-radius: 1;
+}
+.text-field {
+    -fx-background-color: #063970 , white , white;
+    -fx-background-insets: 0 -1 -1 -1, 0 0 0 0, 0 -1 3 -1;
+}
+
+.text-field:focused {
+    -fx-background-color: #063970 , white , white;
+    -fx-background-insets: 0 -1 -1 -1, 0 0 0 0, 0 -1 3 -1;
+}
+.combo-box {
+    -fx-background-color: #063970 , white , white;
+    -fx-background-insets: 0 -1 -1 -1, 0 0 0 0, 0 -1 3 -1;
+}
+
+.combo-box:focused {
+    -fx-background-color: #063970 , white , white;
+    -fx-background-insets: 0 -1 -1 -1, 0 0 0 0, 0 -1 3 -1;
+}
+.text-area {
+    -fx-background-color: #063970 , white , white;
+    -fx-background-insets: 0 -1 -1 -1, 0 0 0 0, 0 -1 3 -1;
+}
+
+.text-area:focused {
+    -fx-background-color: #063970 , white , white;
+    -fx-background-insets: 0 -1 -1 -1, 0 0 0 0, 0 -1 3 -1;
+}
+
+.separator *.line {
+    -fx-border-style: solid;
+    -fx-border-width: 0 0 1 0; /* its make really one-pixel-border */
+    -fx-border-color: #063970;
+}

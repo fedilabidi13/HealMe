@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="294.0" prefWidth="380.0" style="-fx-background-color: white;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.addAppointmentController">
+    <children>
+        <Label layoutX="25.0" layoutY="83.0" text="Patient" textFill="#063970" />
+        <Label layoutX="26.0" layoutY="132.0" text="Status" textFill="#063970" />
+        <Label layoutX="26.0" layoutY="171.0" text="Date" textFill="#063970" />
+        <ComboBox fx:id="statusCombo" layoutX="109.0" layoutY="127.0" prefHeight="31.0" prefWidth="233.0" promptText="eg: Cancelled" />
+        <DatePicker fx:id="dateInput" layoutX="109.0" layoutY="166.0" prefHeight="31.0" prefWidth="233.0" promptText="eg: 01-08-2000" />
+        <Button fx:id="SubmitBtn" layoutX="165.0" layoutY="235.0" mnemonicParsing="false" onAction="#confirmAdd" text="add" />
+      <ComboBox fx:id="patientCombo" layoutX="109.0" layoutY="77.0" prefHeight="31.0" prefWidth="233.0" promptText="eg: Fedi Labidi" />
+    </children>
+</AnchorPane>
